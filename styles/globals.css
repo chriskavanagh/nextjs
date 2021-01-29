@@ -3,8 +3,6 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -24,13 +22,11 @@ a {
 
 .main {
   flex: 1 0 auto;
-  margin: 10px auto;
+  margin: 3rem auto;
 }
 
 .footer {
-  flex-shrink: 0;
-  background-color: brown;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #b6acac;
   color: #6e6e38;
   font-weight: bold;
