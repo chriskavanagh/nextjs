@@ -22,6 +22,10 @@ export default function Home({ articles }) {
             font-size: 3rem;
             text-align: center;
             margin-bottom: 4rem;
+            font-family: "Potta";
+          }
+          a {
+            color: #033d03;
           }
           a:hover {
             text-decoration: underline;

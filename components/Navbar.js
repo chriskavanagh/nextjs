@@ -45,7 +45,12 @@ const Navbar = () => {
           margin-right: 25px;
           font-size: 16px;
           font-weight: bold;
-          color:  #6e6e38;       
+          color:  #6e6e38;
+          padding: 10px 10px;       
+        }
+        .nav-link:hover {
+          background-color: gray;
+          color: #c2c22e;
         }
         `}
       </style>
