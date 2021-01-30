@@ -1,18 +1,20 @@
 import Head from "next/head";
 import Link from "next/link";
+import ArticleList from "../components/ArticleList";
+
+//import useSWR from "swr";
 //import styles from "../styles/Home.module.css";
 
 export default function Home({ articles }) {
-  console.log(articles);
+  //console.log(articles);
+
   return (
     <div>
       <Head>
         <title>Homepage</title>
       </Head>
       <h1>Articles</h1>
-      {articles.map((article, index) => (
-        <h3 key={index}>{article.title}</h3>
-      ))}
+      <ArticleList articles={articles} />
       <Link href="/ninjas/">
         <a>See Ninjas Listing</a>
       </Link>
