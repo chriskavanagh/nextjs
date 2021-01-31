@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function article({ article }) {
   //const router = useRouter();
@@ -7,6 +8,8 @@ export default function article({ article }) {
     <>
       <h2>{article.title}</h2>
       <p>{article.body}</p>
+      <br />
+      <Link href="/">Go Back</Link>
     </>
   );
 }
