@@ -9,7 +9,7 @@ export default function ArticleList({ articles }) {
         <title>Articles</title>
         <meta name="keywords" content="articles" />
       </Head>
-      <div className={styles.grid}>
+      <div className={styles.container}>
         {articles.map((article, index) => (
           <ArticleItem key={index} article={article} />
         ))}

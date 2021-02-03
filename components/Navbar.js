@@ -24,6 +24,9 @@ const Navbar = () => {
       </div>
       <style jsx>
         {`
+        .nav-wrapper {
+          margin-right: 1rem;
+        }
         .nav {
           display: flex;
           flex-direction: row;
@@ -39,7 +42,7 @@ const Navbar = () => {
         
         {
         a:last-of-type {
-            margin-right: 3rem;
+            margin-left: 0rem;
           }
         }
         {
@@ -55,7 +58,8 @@ const Navbar = () => {
           color: #c2c22e;
         }
         .logo {
-          margin-left: 5.9rem;
+          margin-left: 4rem;
+          margin-top: 10px;
           filter: invert(37%) sepia(77%) saturate(258%) hue-rotate(21deg) brightness(94%) contrast(91%);
         }
         .brger {
@@ -67,13 +71,19 @@ const Navbar = () => {
           }
         .brger {
           display: block;
-          font-size: 30px;
-          margin-right: 1rem;
+          font-size: 34px;          
           color: #4c5010;
+        }
+        .nav {          
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #b6acac;
         }
         .brger:hover {
           cursor: pointer;
         }
+        
         }
         `}
       </style>
