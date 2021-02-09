@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <div className="logo">
-        <Image src="/vercel.svg" width={126} height={75} />
+        <Image src="/vercel.svg" width={128} height={77} />
       </div>
       <div className="nav-wrapper">
         <Link href="/">
@@ -48,7 +48,7 @@ const Navbar = () => {
         {
         .nav-link {
           margin-right: 25px;
-          font-size: 18px;
+          font-size: 19px;
           font-weight: bold;
           color:  #6e6e38;
           padding: 10px 10px;       

@@ -1,0 +1,99 @@
+.cardContainer {
+  background-color: #e0d9d9;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  color: #b3b8cd;
+  padding-top: 30px;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.pro {
+  color: #231e39;
+  background-color: #febb0b;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.round {
+  border: 1px solid #03bfcb;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.primary {
+  background-color: #03bfcb;
+  border: 1px solid #03bfcb;
+  border-radius: 3px;
+  color: #231e39;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+  margin-right: 20px;
+}
+
+.ghost {
+  background-color: transparent;
+  color: #02899c;
+  border: 1px solid #03bfcb;
+  border-radius: 3px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+
+.userData {
+  margin-top: 4rem;
+}
+
+.txt {
+  color: #4c5010;
+}
+
+/* .container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "leftTop rightTop"
+    "leftMiddle rightMiddle"
+    "leftBtm rightBtm";
+}
+.h1 {
+  color: rgb(10, 10, 10);
+  text-align: center;
+  margin: 0 0 4rem 0;
+  text-decoration: underline;
+}
+.emailLabel {
+  color: rgb(24, 21, 21);
+  grid-area: leftTop;
+}
+.emailData {
+  grid-area: rightTop;
+  color: rgb(141, 132, 132);
+  font-weight: bolder;
+}
+.siteLabel {
+  color: rgb(24, 21, 21);
+  grid-area: leftMiddle;
+}
+.siteData {
+  color: rgb(141, 132, 132);
+  grid-area: rightMiddle;
+}
+.addressLabel {
+  color: rgb(24, 21, 21);
+  grid-area: leftBtm;
+}
+.addressData {
+  color: rgb(141, 132, 132);
+  grid-area: rightBtm;
+} */

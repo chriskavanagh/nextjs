@@ -2,12 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import ArticleList from "../components/ArticleList";
 
-//import useSWR from "swr";
-//import styles from "../styles/Home.module.css";
-
 export default function Home({ articles }) {
-  //console.log(articles);
-
   return (
     <div>
       <Head>
