@@ -1,5 +1,12 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+}
+
 .cardContainer {
-  background-color: #e0d9d9;
+  grid-column: 6/8;
+  background-color: #cabbe9;
   border-radius: 5px;
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
   color: #b3b8cd;
@@ -8,6 +15,7 @@
   width: 350px;
   max-width: 100%;
   text-align: center;
+  margin: 3rem 0 0 0;
 }
 
 .pro {
@@ -23,26 +31,26 @@
 }
 
 .round {
-  border: 1px solid #03bfcb;
+  border: 1px solid #4c5010;
   border-radius: 50%;
   padding: 7px;
 }
 
 .primary {
-  background-color: #03bfcb;
-  border: 1px solid #03bfcb;
+  background-color: #a1eafb;
+  border: 1px solid #f7e8e8;
   border-radius: 3px;
-  color: #231e39;
+  color: #0c0101;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   padding: 10px 25px;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 .ghost {
   background-color: transparent;
-  color: #02899c;
-  border: 1px solid #03bfcb;
+  color: #0c0101;
+  border: 1px solid #f7e8e8;
   border-radius: 3px;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
@@ -52,11 +60,22 @@
 .userData {
   margin-top: 4rem;
 }
-
-.txt {
-  color: #4c5010;
+.name {
+  color: #202444;
 }
 
+.txt {
+  color: #fdfdfd;
+}
+
+.txtBtm {
+  color: #fdfdfd;
+  margin-bottom: 3rem;
+}
+
+.para {
+  margin-bottom: 40px;
+}
 /* .container {
   display: grid;
   grid-template-rows: auto;

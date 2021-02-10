@@ -1,12 +1,7 @@
-//import { useRouter } from "next/router";
-import styles from "../../styles/Article.module.css";
 import Link from "next/link";
+import styles from "../../styles/Article.module.css";
 
 export default function article({ article }) {
-  /* const router = useRouter();
-  console.log(router);
-  const { id } = router.query;
-  console.log(id); */
   return (
     <div className={styles.card}>
       <h1>{article.title}</h1>
