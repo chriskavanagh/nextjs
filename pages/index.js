@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Auth from "../components/Auth";
 import ArticleList from "../components/ArticleList";
 
 export default function Home({ articles }) {
@@ -8,6 +9,9 @@ export default function Home({ articles }) {
       <Head>
         <title>Homepage</title>
       </Head>
+      <div className="auth">
+        <Auth />
+      </div>
       <h1>Articles</h1>
       <ArticleList articles={articles} />
       <Link href="/ninjas/">
@@ -15,6 +19,9 @@ export default function Home({ articles }) {
       </Link>
       <style jsx>
         {`
+          .auth {
+            text-align: center;
+          }
           h1 {
             font-size: 3rem;
             text-align: center;

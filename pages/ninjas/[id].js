@@ -25,7 +25,6 @@ export default function Details({ ninja }) {
             <h4 className={styles.txt}>{ninja.email}</h4>
             <h4 className={styles.txtBtm}>{ninja.website}</h4>
           </div>
-          <hr />
         </div>
       </div>
     </div>
