@@ -1,53 +1,21 @@
 import Head from "next/head";
 import Link from "next/link";
 import Auth from "../components/Auth";
-import ArticleList from "../components/ArticleList";
+//import ArticleList from "../components/ArticleList";
 
-export default function Home({ articles }) {
+export default function Home() {
   return (
     <div>
       <Head>
         <title>Homepage</title>
       </Head>
-      <div className="auth">
-        <Auth />
-      </div>
-      <h1>Articles</h1>
-      <ArticleList articles={articles} />
-      <Link href="/ninjas/">
-        <a>See Ninjas Listing</a>
+      <h1>Home</h1>
+      <hr />
+      <Link href={`/articles`}>
+        <a>
+          <h3>Articles</h3>
+        </a>
       </Link>
-      <style jsx>
-        {`
-          .auth {
-            text-align: center;
-          }
-          h1 {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 4rem;
-            font-family: "Potta";
-          }
-          a {
-            color: #033d03;
-          }
-          a:hover {
-            text-decoration: underline;
-          }
-        `}
-      </style>
     </div>
   );
 }
-
-export const getStaticProps = async () => {
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts?_limit=16`
-  );
-  const articles = await res.json();
-  return {
-    props: {
-      articles,
-    },
-  };
-};
