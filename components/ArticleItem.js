@@ -4,8 +4,9 @@ import styles from "../styles/Article.module.css";
 
 export default function ArticleItem({ article }) {
   return (
-    <Link href={`/article/${article.id}`}>
+    <Link href={`/articles/${article.id}`}>
       <a className={styles.card}>
+        <h2>{article.id}</h2>
         <h3>{article.title.substring(0, 25)}</h3>
         <p>{article.body}</p>
       </a>

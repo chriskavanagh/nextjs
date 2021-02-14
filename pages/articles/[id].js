@@ -3,13 +3,13 @@ import styles from "../../styles/Article.module.css";
 
 export default function article({ article }) {
   return (
-    <div className={styles.card}>
+    <article className={styles.card}>
       <h1>{article.title}</h1>
       <h2>{article.id}</h2>
       <p>{article.body}</p>
       <br />
       <Link href="/">Go Back</Link>
-    </div>
+    </article>
   );
 }
 

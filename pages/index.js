@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       <h1>Home</h1>
       <hr />
-      <Link href={`/articles`}>
+      <Link href="/articles">
         <a>
           <h3>Articles</h3>
         </a>

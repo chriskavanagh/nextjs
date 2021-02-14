@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Link from "next/link";
-import Auth from "../../components/Auth";
+//import Link from "next/link";
+//import Auth from "../../components/Auth";
 import styles from "../../styles/Article.module.css";
-//import ArticleItem from "../../components/ArticleItem";
+import ArticleItem from "../../components/ArticleItem";
 
 export const getStaticProps = async () => {
   const res = await fetch(
@@ -23,19 +23,15 @@ export default function Articles({ articles }) {
         <title>Articles</title>
         <meta name="keywords" content="articles" />
       </Head>
-      <div className={styles.container}>
+      <main className={styles.container}>
         {articles.map((article, index) => (
-          <Link href={`/articles/${article.id}`} key={index}>
-            <a>
-              <h3>{article.id}</h3>
-            </a>
-          </Link>
+          <ArticleItem article={article} key={index} />
         ))}
-      </div>
+      </main>
       <style jsx>
         {`
           h3 {
-            color: black;
+            color: #521b49;
           }
         `}
       </style>
@@ -50,11 +46,23 @@ export default function Articles({ articles }) {
         <title>Articles</title>
         <meta name="keywords" content="articles" />
       </Head>
-      <div className={styles.container}>
+      <main className={styles.container}>
         {articles.map((article, index) => (
-          <ArticleItem key={index} article={article} />
+          <Link href={`/articles/${article.id}`} key={index}>
+            <a>
+              <h3>{article.title.substring(0, 25)}</h3>
+              <p>{article.body}</p>
+            </a>
+          </Link>
         ))}
-      </div>
+      </main>
+      <style jsx>
+        {`
+          h3 {
+            color: #521b49;
+          }
+        `}
+      </style>
     </>
   );
 } */

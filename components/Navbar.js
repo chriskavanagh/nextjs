@@ -14,8 +14,8 @@ const Navbar = () => {
         <Link href="/about">
           <a className="nav-link">About</a>
         </Link>
-        <Link href="/posts/first-post">
-          <a className="nav-link">First Post</a>
+        <Link href="/articles">
+          <a className="nav-link">Articles</a>
         </Link>
         <Link href="/ninjas">
           <a className="nav-link">Ninja Listing</a>
