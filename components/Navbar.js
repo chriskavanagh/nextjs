@@ -24,67 +24,66 @@ const Navbar = () => {
       </div>
       <style jsx>
         {`
-        .nav-wrapper {
-          margin-right: 1rem;
-        }
-        .nav {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          background-color: #b6acac;
-        }
-        .title{
-          color: #4c5010;
-          font-size: 21px;
-          margin-left: 1.5rem;        
-        }
-        
-        {
-        a:last-of-type {
+          .nav-wrapper {
+            margin-left: 10rem;
+          }
+          .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #b6acac;
+          }
+          .title {
+            color: #4c5010;
+            font-size: 21px;
+            margin-left: 1.5rem;
+          }
+          a:last-of-type {
             margin-left: 0rem;
           }
-        }
-        {
-        .nav-link {
-          margin-right: 25px;
-          font-size: 19px;
-          font-weight: bold;
-          color:  #6e6e38;
-          padding: 10px 10px;       
-        }
-        .nav-link:hover {
-          background-color: gray;
-          color: #c2c22e;
-        }
-        .logo {
-          margin-left: 4rem;
-          margin-top: 10px;
-          filter: invert(37%) sepia(77%) saturate(258%) hue-rotate(21deg) brightness(94%) contrast(91%);
-        }
-        .brger {
-          display: none;
-        }
-        @media screen and (max-width: 800px) {
+
           .nav-link {
+            margin-right: 20px;
+            font-size: 19px;
+            font-weight: bold;
+            color: #6e6e38;
+            padding: 10px 10px;
+          }
+          .nav-link:hover {
+            background-color: gray;
+            color: #c2c22e;
+            transition: 1s;
+          }
+          .logo {
+            margin-left: 4rem;
+            margin-top: 10px;
+            filter: invert(37%) sepia(77%) saturate(258%) hue-rotate(21deg)
+              brightness(94%) contrast(91%);
+          }
+          .brger {
             display: none;
           }
-        .brger {
-          display: block;
-          font-size: 34px;          
-          color: #4c5010;
-        }
-        .nav {          
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          background-color: #b6acac;
-        }
-        .brger:hover {
-          cursor: pointer;
-        }
-        
-        }
+          @media screen and (max-width: 800px) {
+            .nav-link {
+              display: none;
+            }
+            .brger {
+              display: block;
+              font-size: 34px;
+              color: #4c5010;
+              margin-right: 10px;
+            }
+            .nav {
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              background-color: #b6acac;
+            }
+            .brger:hover {
+              cursor: pointer;
+            }
+          }
         `}
       </style>
     </nav>

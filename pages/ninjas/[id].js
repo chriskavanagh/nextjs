@@ -1,7 +1,10 @@
-import React from "react";
 import styles from "../../styles/Details.module.css";
 
 export default function Details({ ninja }) {
+  console.log(ninja);
+  const clickMe = (e) => {
+    console.log("Iam a button!");
+  };
   return (
     <div className={styles.wrapper}>
       <div className={styles.cardContainer}>
@@ -16,11 +19,15 @@ export default function Details({ ninja }) {
         <p className={[styles.txt, styles.para].join(" ")}>
           User interface designer and <br /> front-end developer
         </p>
-        <div class="buttons">
-          <button className={styles.primary}>Message</button>
-          <button className={styles.ghost}>Following</button>
+        <div className="buttons">
+          <button onClick={clickMe} className={styles.primary}>
+            Message
+          </button>
+          <button onClick={clickMe} className={styles.ghost}>
+            Following
+          </button>
         </div>
-        <div class="skills">
+        <div className="skills">
           <div className={styles.userData}>
             <h4 className={styles.txt}>{ninja.email}</h4>
             <h4 className={styles.txtBtm}>{ninja.website}</h4>

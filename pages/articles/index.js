@@ -1,6 +1,4 @@
 import Head from "next/head";
-//import Link from "next/link";
-//import Auth from "../../components/Auth";
 import styles from "../../styles/Article.module.css";
 import ArticleItem from "../../components/ArticleItem";
 

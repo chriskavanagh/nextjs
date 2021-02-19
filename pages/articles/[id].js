@@ -14,9 +14,8 @@ export default function article({ article }) {
 }
 
 export const getStaticProps = async (context) => {
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
-  );
+  const { id } = context.params;
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
   const article = await res.json();
   return {
     props: {

@@ -13,7 +13,8 @@ export const getStaticProps = async () => {
   };
 };
 
-function Ninjas({ ninjas }) {
+export default function Ninjas({ ninjas }) {
+  console.log(ninjas);
   return (
     <div>
       <h1>All Ninjas!</h1>
@@ -28,4 +29,16 @@ function Ninjas({ ninjas }) {
   );
 }
 
-export default Ninjas;
+/* export default function Ninjas({ ninjas }) {
+  console.log(ninjas);
+  let ninjaMen = [];
+  for (let i = 0; i < ninjas.length; i++) {
+    ninjaMen.push(<div key={i}>{ninjas[i].name}</div>);
+  }
+  return (
+    <div>
+      <h1>All Ninjas!</h1>
+      <h3>{ninjaMen}</h3>
+    </div>
+  );
+} */

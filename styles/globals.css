@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Potta+One&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -8,15 +14,12 @@ body {
   width: 100%;
   font-family: "Nunito";
   min-height: 100%;
+  box-sizing: inherit;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .content {

@@ -1,0 +1,28 @@
+.container {
+  padding: 3em;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.quote {
+  padding: 2em;
+  border-radius: 0.3em;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.span {
+  font-weight: bold;
+  position: relative;
+  margin-left: 15px;
+}
+
+.span::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 10px;
+  border-bottom: 1px solid black;
+  top: 10px;
+  left: -15px;
+}
