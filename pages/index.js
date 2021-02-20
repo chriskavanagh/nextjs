@@ -3,6 +3,8 @@ import Image from "next/image";
 // import Auth from "../components/Auth";
 //import ArticleList from "../components/ArticleList";
 import { signIn, signOut, useSession } from "next-auth/client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   const [session] = useSession();
@@ -28,9 +30,13 @@ export default function Home() {
               />
             </div>
             <p>GitHub Login</p>
-            <button className="login" onClick={() => signIn("facebook")}>
-              Facebook SignIn
-            </button>
+
+            <FontAwesomeIcon
+              icon={faFacebook}
+              color="rgb(59, 91, 152)"
+              size="3x"
+              onClick={() => signIn("facebook")}
+            />
           </div>
         ) : (
           <>
@@ -52,6 +58,10 @@ export default function Home() {
         )}
         <style jsx>
           {`
+            i {
+              font-size: 48px;
+              color: rgb(59, 91, 152);
+            }
             p {
               font-weight: bolder;
             }

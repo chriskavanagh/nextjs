@@ -8,6 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@prisma/client": "^2.16.1",
     "next": "10.0.5",
     "next-auth": "^3.3.0",
