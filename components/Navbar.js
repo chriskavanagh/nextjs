@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useSession } from "next-auth/client";
 
 const Navbar = () => {
+  const [session] = useSession();
+  //console.log(`%c ${JSON.stringify(session.user.image)}`, "color:#4400ff");
   return (
     <nav className="nav">
       <div className="logo">
@@ -9,7 +12,7 @@ const Navbar = () => {
       </div>
       <div className="nav-wrapper">
         <Link href="/">
-          <a className="nav-link">Home</a>
+          <a className="nav-link">{!session ? "Home" : session.user.name}</a>
         </Link>
         <Link href="/about">
           <a className="nav-link">About</a>
@@ -20,6 +23,23 @@ const Navbar = () => {
         <Link href="/ninjas">
           <a className="nav-link">Ninja Listing</a>
         </Link>
+        <Link href="/">
+          <a className="nav-link">
+            {session ? (
+              <img
+                src={session.user.image}
+                style={{
+                  width: "30px",
+                  borderRadius: "50%",
+                  marginBottom: "-7px",
+                }}
+              />
+            ) : (
+              ""
+            )}
+          </a>
+        </Link>
+
         <div className="brger">&#9776;</div>
       </div>
       <style jsx>
@@ -32,10 +52,10 @@ const Navbar = () => {
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            background-color: #b6acac;
+            background-color: #477be4;
           }
           .title {
-            color: #4c5010;
+            color: #fff;
             font-size: 21px;
             margin-left: 1.5rem;
           }
@@ -47,7 +67,7 @@ const Navbar = () => {
             margin-right: 20px;
             font-size: 19px;
             font-weight: bold;
-            color: #6e6e38;
+            color: #fff;
             padding: 10px 10px;
           }
           .nav-link:hover {
@@ -57,6 +77,7 @@ const Navbar = () => {
           }
           .logo {
             margin-left: 4rem;
+            color: #fff;
             margin-top: 10px;
             filter: invert(37%) sepia(77%) saturate(258%) hue-rotate(21deg)
               brightness(94%) contrast(91%);
@@ -71,14 +92,14 @@ const Navbar = () => {
             .brger {
               display: block;
               font-size: 34px;
-              color: #4c5010;
+              color: #fff;
               margin-right: 10px;
             }
             .nav {
               flex-direction: row;
               justify-content: space-between;
               align-items: center;
-              background-color: #b6acac;
+              background-color: inherit;
             }
             .brger:hover {
               cursor: pointer;

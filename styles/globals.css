@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Potta+One&display=swap");
 
+@font-face {
+  font-family: "GothamBook";
+  src: url("/Gotham-Font/GothamBook.ttf");
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -31,6 +37,7 @@ a {
 .main {
   flex: 1 0 auto;
   margin: 3rem auto;
+  width: 100%;
 }
 
 .footer {

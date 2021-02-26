@@ -1,10 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-// import Auth from "../components/Auth";
-//import ArticleList from "../components/ArticleList";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   const [session] = useSession();
@@ -14,9 +12,15 @@ export default function Home() {
     <>
       <Head>
         <title>Auth Demo</title>
+        <link
+          rel="preload"
+          href="/Gotham-Font/GothamBook.ttf"
+          as="font"
+          crossorigins=""
+        />
       </Head>
 
-      <div>
+      <div className="wrapper">
         {!session ? (
           <div className="topDiv">
             <div>
@@ -40,8 +44,8 @@ export default function Home() {
           </div>
         ) : (
           <>
-            <span>{session.user.name}</span>
-            {session.user.image && (
+            {/* <h4>{session.user.name}</h4> */}
+            {/* {session.user.image && (
               <img
                 src={session.user.image}
                 style={{
@@ -50,14 +54,35 @@ export default function Home() {
                   marginLeft: "15px",
                 }}
               />
-            )}
-            <button className="logout" onClick={signOut}>
-              Sign Out
-            </button>
+            )} */}
+            <div className="btnWrap">
+              <button className="logout" onClick={signOut}>
+                <FontAwesomeIcon
+                  style={{
+                    position: "absolute",
+                    left: 11,
+                    paddingRight: "10px",
+                  }}
+                  icon={faGithub}
+                  size="lg"
+                  pull="left"
+                />
+                <span className="logoutSpan">Logout Of Github</span>
+              </button>
+            </div>
           </>
         )}
         <style jsx>
           {`
+            .wrapper {
+              display: grid;
+              grid-template-columns: repeat(12, 1fr);
+              grid-template-rows: auto;
+            }
+            .btnWrap {
+              grid-column: 6 / span 2;
+              justify-self: center;
+            }
             i {
               font-size: 48px;
               color: rgb(59, 91, 152);
@@ -80,11 +105,17 @@ export default function Home() {
               display: block;
             }
             .logout {
-              margin-left: 15px;
-              padding: 5px 17px;
+              padding: 12px 32px;
               border-radius: 7px;
-              background-color: #b81f1f;
+              background-color: #030d4d;
               color: white;
+              font-size: 16px;
+              font-family: "GothamBook";
+              display: block;
+              position: relative;
+            }
+            .logoutSpan {
+              margin-left: 15px;
             }
           `}
         </style>
