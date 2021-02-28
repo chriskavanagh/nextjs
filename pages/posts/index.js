@@ -14,8 +14,8 @@ export const getStaticProps = async () => {
 export default function Posts({ posts }) {
   return (
     <div>
-      {posts.map((post) => (
-        <p>{post.title}</p>
+      {posts.map((post, index) => (
+        <p key={index}>{post.title}</p>
       ))}
     </div>
   );

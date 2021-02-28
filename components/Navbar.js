@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useSession } from "next-auth/client";
+import { faPortrait } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
   const [session] = useSession();
@@ -12,7 +14,7 @@ const Navbar = () => {
       </div>
       <div className="nav-wrapper">
         <Link href="/">
-          <a className="nav-link">{!session ? "Home" : session.user.name}</a>
+          <a className="nav-link">{!session ? "Home" : session.user.email}</a>
         </Link>
         <Link href="/about">
           <a className="nav-link">About</a>
@@ -26,16 +28,20 @@ const Navbar = () => {
         <Link href="/">
           <a className="nav-link">
             {session ? (
-              <img
-                src={session.user.image}
-                style={{
-                  width: "30px",
-                  borderRadius: "50%",
-                  marginBottom: "-7px",
-                }}
-              />
+              session.user.image ? (
+                <img
+                  src={session.user.image}
+                  style={{
+                    width: "30px",
+                    borderRadius: "50%",
+                    marginBottom: "-7px",
+                  }}
+                />
+              ) : (
+                <FontAwesomeIcon icon={faPortrait} size="lg" color="white" />
+              )
             ) : (
-              ""
+              <FontAwesomeIcon icon={faPortrait} size="lg" color="white" />
             )}
           </a>
         </Link>
