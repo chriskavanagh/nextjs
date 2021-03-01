@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import Backdrop from "./Backdrop";
 
 const Layout = ({ children }) => {
-  let sidebar;
   let backdrop;
   const [open, setOpen] = useState(false);
 
@@ -14,13 +13,8 @@ const Layout = ({ children }) => {
     setOpen(!open);
   };
 
-  const backdropClickHandler = () => {
-    console.log("backdropClickHandler Clicked!");
-    setOpen(!open);
-  };
-
   if (open) {
-    backdrop = <Backdrop click={backdropClickHandler} />;
+    backdrop = <Backdrop />;
   }
 
   return (
