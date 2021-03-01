@@ -41,6 +41,7 @@ export default function Home() {
               size="3x"
               onClick={() => signIn("facebook")}
             />
+            <p>Facebook Login</p>
           </div>
         ) : (
           <>
@@ -67,7 +68,7 @@ export default function Home() {
                   size="lg"
                   pull="left"
                 />
-                <span className="logoutSpan">Logout Of Github</span>
+                <span className="logoutSpan">Logout</span>
               </button>
             </div>
           </>

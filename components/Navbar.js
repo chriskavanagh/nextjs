@@ -1,17 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useSession } from "next-auth/client";
-import { faPortrait } from "@fortawesome/free-solid-svg-icons";
+import { faPortrait, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [session] = useSession();
   //console.log(`%c ${JSON.stringify(session.user.image)}`, "color:#4400ff");
   return (
     <nav className="nav">
-      <div className="logo">
-        <Image src="/vercel.svg" width={128} height={77} />
+      <div onClick={props.handle} style={{ cursor: "pointer" }}>
+        <FontAwesomeIcon icon={faBars} size="lg" />
       </div>
+      <Link href="/" className="logo">
+        <Image src="/vercel.svg" width={128} height={77} />
+      </Link>
+
       <div className="nav-wrapper">
         <Link href="/">
           <a className="nav-link">{!session ? "Home" : session.user.email}</a>
@@ -82,7 +86,6 @@ const Navbar = () => {
             transition: 1s;
           }
           .logo {
-            margin-left: 4rem;
             color: #fff;
             margin-top: 10px;
             filter: invert(37%) sepia(77%) saturate(258%) hue-rotate(21deg)
