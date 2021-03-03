@@ -1,8 +1,8 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import React, { useState } from "react";
 import Backdrop from "./Backdrop";
+import React, { useState } from "react";
 
 const Layout = ({ children }) => {
   let backdrop;
@@ -13,9 +13,11 @@ const Layout = ({ children }) => {
     setOpen(!open);
   };
 
-  if (open) {
-    backdrop = <Backdrop />;
-  }
+  // if (open) {
+  //   backdrop = <Backdrop />;
+  // }
+
+  open ? (backdrop = <Backdrop />) : null;
 
   return (
     <div className="content">
