@@ -10,10 +10,6 @@ const Sidebar = (props) => {
     sidebarClass = "sidebar open";
   }
 
-  if (props.visible) {
-    sidebarClass = "sidebar open";
-  }
-
   return (
     <div className={sidebarClass}>
       <div className="topLogo" onClick={props.handle}>

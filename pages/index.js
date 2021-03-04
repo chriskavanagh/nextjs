@@ -34,7 +34,7 @@ export default function Home(props) {
                 alt="git"
                 width={60}
                 height={60}
-                onClick={handleDrawer}
+                onClick={() => signIn("github")}
               />
             </div>
             <p>GitHub Login</p>
