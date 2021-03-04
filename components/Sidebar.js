@@ -1,6 +1,7 @@
-import React from "react";
-//import styles from "../styles/Sidebar.module.css";
+import React, { useContext } from "react";
+import Link from "next/link";
 import { AiOutlineBars } from "react-icons/ai";
+//import styles from "../styles/Sidebar.module.css";
 import { SidebarData } from "../helpers/SidebarData";
 
 const Sidebar = (props) => {
@@ -8,8 +9,13 @@ const Sidebar = (props) => {
   if (props.show) {
     sidebarClass = "sidebar open";
   }
+
+  if (props.visible) {
+    sidebarClass = "sidebar open";
+  }
+
   return (
-    <div className={sidebarClass} onClick={props.handle}>
+    <div className={sidebarClass}>
       <div className="topLogo" onClick={props.handle}>
         <AiOutlineBars size="1.6em" style={{ cursor: "pointer" }} />
         <div className="brandName">Vercel!</div>
@@ -18,7 +24,9 @@ const Sidebar = (props) => {
       <nav className="grid">
         {SidebarData.map((item, index) => (
           <>
-            <div className="icon">{item.icon}</div>
+            <Link href="/articles">
+              <div className="icon">{item.icon}</div>
+            </Link>
             <div className={item.cName}>{item.title}</div>
           </>
         ))}

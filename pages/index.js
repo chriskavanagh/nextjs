@@ -1,12 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
+import React, { useContext } from "react";
+import { DrawerContext } from "../context/drawerContext";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-export default function Home() {
+export default function Home(props) {
   const [session] = useSession();
-  console.log(session);
+
+  const { handleDrawer } = useContext(DrawerContext);
+  console.log(handleDrawer);
 
   return (
     <>
@@ -30,7 +34,7 @@ export default function Home() {
                 alt="git"
                 width={60}
                 height={60}
-                onClick={() => signIn("github")}
+                onClick={handleDrawer}
               />
             </div>
             <p>GitHub Login</p>

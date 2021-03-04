@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useSession } from "next-auth/client";
+import { AiOutlineBars } from "react-icons/ai";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPortrait, faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,7 +11,8 @@ const Navbar = (props) => {
   return (
     <nav className="nav">
       <div onClick={props.handle} style={{ cursor: "pointer" }}>
-        <FontAwesomeIcon icon={faBars} size="lg" />
+        {/* <FontAwesomeIcon icon={faBars} size="lg" /> */}
+        <AiOutlineBars size="2em" style={{ cursor: "pointer" }} />
       </div>
       <Link href="/" className="logo">
         <Image src="/vercel.svg" width={128} height={77} />
