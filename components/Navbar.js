@@ -3,14 +3,14 @@ import Image from "next/image";
 import { useSession } from "next-auth/client";
 import { AiOutlineBars } from "react-icons/ai";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPortrait, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faPortrait } from "@fortawesome/free-solid-svg-icons";
 
-const Navbar = (props) => {
+const Navbar = ({ handle }) => {
   const [session] = useSession();
   //console.log(`%c ${JSON.stringify(session.user.image)}`, "color:#4400ff");
   return (
     <nav className="nav">
-      <div onClick={props.handle} style={{ cursor: "pointer" }}>
+      <div onClick={handle} style={{ cursor: "pointer" }} className="bars">
         {/* <FontAwesomeIcon icon={faBars} size="lg" /> */}
         <AiOutlineBars size="2em" style={{ cursor: "pointer" }} />
       </div>
@@ -57,14 +57,18 @@ const Navbar = (props) => {
       <style jsx>
         {`
           .nav-wrapper {
-            margin-left: 10rem;
+            grid-column: 9/13;
           }
           .nav {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
             align-items: center;
             background-color: #477be4;
+            padding: 0.3rem;
+          }
+          .bars {
+            grid-column: 1/2;
+            justify-self: center;
           }
           .title {
             color: #fff;

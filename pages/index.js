@@ -5,12 +5,15 @@ import { DrawerContext } from "../context/drawerContext";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
+//import useSideDrawer from "../hooks/useSideDrawer";
 
 export default function Home(props) {
   const [session] = useSession();
 
-  const { handleDrawer } = useContext(DrawerContext);
-  console.log(handleDrawer);
+  const { closeDrawer } = useContext(DrawerContext);
+
+  /* const { open, closeDrawer } = useSideDrawer();
+  console.log(open); */
 
   return (
     <>
@@ -46,6 +49,7 @@ export default function Home(props) {
               onClick={() => signIn("facebook")}
             />
             <p>Facebook Login</p>
+            <button onClick={closeDrawer}>Close Sidebar</button>
           </div>
         ) : (
           <>
@@ -79,6 +83,9 @@ export default function Home(props) {
         )}
         <style jsx>
           {`
+            button {
+              margin-left: 25rem;
+            }
             .wrapper {
               display: grid;
               grid-template-columns: repeat(12, 1fr);

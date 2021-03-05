@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import Link from "next/link";
 import { AiOutlineBars } from "react-icons/ai";
 //import styles from "../styles/Sidebar.module.css";
