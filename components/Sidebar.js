@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import { AiOutlineBars } from "react-icons/ai";
 //import styles from "../styles/Sidebar.module.css";
 import { SidebarData } from "../helpers/SidebarData";
+//import { DrawerContext } from "../context/drawerContext";
 
-const Sidebar = (props) => {
+const Sidebar = ({ show, handle }) => {
+  // can use context instead of props
+  // const { open, handleDrawer } = useContext(DrawerContext);
   let sidebarClass = "sidebar";
-  if (props.show) {
+  if (show) {
     sidebarClass = "sidebar open";
   }
 
   return (
     <div className={sidebarClass}>
-      <div className="topLogo" onClick={props.handle}>
+      <div className="topLogo" onClick={handle}>
         <AiOutlineBars size="1.6em" style={{ cursor: "pointer" }} />
         <div className="brandName">Vercel!</div>
       </div>

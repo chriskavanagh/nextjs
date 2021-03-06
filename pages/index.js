@@ -12,9 +12,6 @@ export default function Home(props) {
 
   const { closeDrawer } = useContext(DrawerContext);
 
-  /* const { open, closeDrawer } = useSideDrawer();
-  console.log(open); */
-
   return (
     <>
       <Head>
@@ -49,7 +46,6 @@ export default function Home(props) {
               onClick={() => signIn("facebook")}
             />
             <p>Facebook Login</p>
-            <button onClick={closeDrawer}>Close Sidebar</button>
           </div>
         ) : (
           <>
