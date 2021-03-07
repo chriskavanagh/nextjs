@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineBars } from "react-icons/ai";
 //import styles from "../styles/Sidebar.module.css";
@@ -23,10 +23,12 @@ const Sidebar = ({ show, handle }) => {
       <nav className="grid">
         {SidebarData.map((item, index) => (
           <>
-            <Link href="/articles">
+            <Link href={item.path}>
               <div className="icon">{item.icon}</div>
             </Link>
-            <div className={item.cName}>{item.title}</div>
+            <Link href={item.path}>
+              <div className={item.cName}>{item.title}</div>
+            </Link>
           </>
         ))}
       </nav>

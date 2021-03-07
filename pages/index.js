@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { DrawerContext } from "../context/drawerContext";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,7 +9,6 @@ import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home(props) {
   const [session] = useSession();
-
   const { closeDrawer } = useContext(DrawerContext);
 
   return (

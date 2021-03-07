@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 
 // Create Context Object
 export const DrawerContext = createContext(false);
@@ -17,6 +17,19 @@ export const DrawerContextProvider = ({ children }) => {
     console.log("CloseDrawer Func");
     setOpen(false);
   };
+
+  const bodyListener = () => {
+    console.log("Body Listener");
+  };
+
+  /* useEffect(() => {
+    const body = document.querySelector("body");
+    //console.log(body);
+    body.addEventListener("click", closeDrawer);
+    return function cleanup() {
+      body.addEventListener("click", closeDrawer);
+    };
+  }, []); */
 
   return (
     <DrawerContext.Provider value={{ open, handleDrawer, closeDrawer }}>
