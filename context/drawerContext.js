@@ -22,15 +22,6 @@ export const DrawerContextProvider = ({ children }) => {
     console.log("Body Listener");
   };
 
-  /* useEffect(() => {
-    const body = document.querySelector("body");
-    //console.log(body);
-    body.addEventListener("click", closeDrawer);
-    return function cleanup() {
-      body.addEventListener("click", closeDrawer);
-    };
-  }, []); */
-
   return (
     <DrawerContext.Provider value={{ open, handleDrawer, closeDrawer }}>
       {children}

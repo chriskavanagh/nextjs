@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
   //   backdrop = <Backdrop />;
   // }
 
+  // if boolean open (if SideDrawer is open) backdrop will open
   open ? (backdrop = <Backdrop />) : null;
 
   return (

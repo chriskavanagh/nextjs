@@ -1,15 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import { DrawerContext } from "../context/drawerContext";
 
 const Backdrop = () => {
-  const { closeDrawer } = useContext(DrawerContext);
+  const { closeDrawer } = React.useContext(DrawerContext);
 
   React.useEffect(() => {
+    console.log("useEffect Ran");
     const body = document.querySelector(".backdrop");
-    //console.log(body);
     body.addEventListener("click", closeDrawer);
+
     return function cleanup() {
-      body.addEventListener("click", closeDrawer);
+      console.log("Remove Event Listener");
+      body.removeEventListener("click", closeDrawer);
     };
   }, []);
   return (
