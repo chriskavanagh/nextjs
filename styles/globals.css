@@ -114,5 +114,13 @@ a {
   width: 100%;
   background-color: thistle;
   height: 1px;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 1rem 0;
+}
+
+.sidebar .sideBarLogin {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 1.9rem;
+  color: wheat;
 }

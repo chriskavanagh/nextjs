@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-import React, { useContext, useEffect } from "react";
-import { DrawerContext } from "../context/drawerContext";
+import React from "react";
+//import { DrawerContext } from "../context/drawerContext";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -9,7 +8,7 @@ import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home(props) {
   const [session] = useSession();
-  const { closeDrawer } = useContext(DrawerContext);
+  //const { closeDrawer } = useContext(DrawerContext);
 
   return (
     <>
@@ -27,12 +26,10 @@ export default function Home(props) {
         {!session ? (
           <div className="topDiv">
             <div>
-              <Image
+              <FontAwesomeIcon
                 className="gitImg"
-                src="/github-logo-png.png"
-                alt="git"
-                width={60}
-                height={60}
+                icon={faGithub}
+                size="3x"
                 onClick={() => signIn("github")}
               />
             </div>

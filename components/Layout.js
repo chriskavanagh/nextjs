@@ -10,16 +10,6 @@ const Layout = ({ children }) => {
   const { open, handleDrawer } = useContext(DrawerContext);
   //const { open, handleDrawer } = useSideDrawer();
   let backdrop;
-  // const [open, setOpen] = useState(false);
-
-  /* const handleDrawer = () => {
-    console.log("handleDrawer Clicked!");
-    setOpen(!open);
-  }; */
-
-  // if (open) {
-  //   backdrop = <Backdrop />;
-  // }
 
   // if boolean open (if SideDrawer is open) backdrop will open
   open ? (backdrop = <Backdrop />) : null;

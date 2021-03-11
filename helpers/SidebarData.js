@@ -2,6 +2,7 @@ import React from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
+import { faBity } from "@fortawesome/free-brands-svg-icons";
 
 export const SidebarData = [
   {
@@ -38,6 +39,21 @@ export const SidebarData = [
     title: "Support",
     path: "/support",
     icon: <IoIcons.IoMdHelpCircle color="white" size="1.4em" />,
+    cName: "nav-text",
+  },
+];
+
+export const SidebarAuth = [
+  {
+    title: "Github",
+    path: "github",
+    icon: <FaIcons.FaGithub color="white" size="1.4em" />,
+    cName: "nav-text",
+  },
+  {
+    title: "Facebook",
+    path: "facebook",
+    icon: <FaIcons.FaFacebook color="white" size="1.4em" />,
     cName: "nav-text",
   },
 ];

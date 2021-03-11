@@ -1,8 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { AiOutlineBars } from "react-icons/ai";
 //import styles from "../styles/Sidebar.module.css";
-import { SidebarData } from "../helpers/SidebarData";
+import { signIn, signOut, useSession } from "next-auth/client";
+import { SidebarData, SidebarAuth } from "../helpers/SidebarData";
 //import { DrawerContext } from "../context/drawerContext";
 
 const Sidebar = ({ show, handle }) => {
@@ -29,6 +30,21 @@ const Sidebar = ({ show, handle }) => {
             <Link href={item.path}>
               <div className={item.cName}>{item.title}</div>
             </Link>
+          </>
+        ))}
+      </nav>
+      <div className="btmLine"></div>
+      <div className="sideBarLogin">Social Auth Login</div>
+
+      <nav className="grid">
+        {SidebarAuth.map((item, index) => (
+          <>
+            <div onClick={() => signIn(item.path)}>
+              <div className="icon">{item.icon}</div>
+            </div>
+            <div onClick={() => signIn(item.path)}>
+              <div className={item.cName}>{item.title}</div>
+            </div>
           </>
         ))}
       </nav>

@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext } from "react";
 
 // Create Context Object
 export const DrawerContext = createContext(false);
@@ -16,10 +16,6 @@ export const DrawerContextProvider = ({ children }) => {
   const closeDrawer = () => {
     console.log("CloseDrawer Func");
     setOpen(false);
-  };
-
-  const bodyListener = () => {
-    console.log("Body Listener");
   };
 
   return (
