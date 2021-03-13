@@ -56,4 +56,10 @@ export const SidebarAuth = [
     icon: <FaIcons.FaFacebook color="white" size="1.4em" />,
     cName: "nav-text",
   },
+  {
+    title: "Email",
+    path: "/api/auth/signup",
+    icon: <AiIcons.AiOutlineMail color="white" size="1.4em" />,
+    cName: "nav-text",
+  },
 ];

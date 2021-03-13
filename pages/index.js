@@ -1,19 +1,16 @@
 import Head from "next/head";
 import React from "react";
-//import { DrawerContext } from "../context/drawerContext";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
-//import useSideDrawer from "../hooks/useSideDrawer";
 
 export default function Home(props) {
   const [session] = useSession();
   //const { closeDrawer } = useContext(DrawerContext);
-
   return (
     <>
       <Head>
-        <title>Auth Demo</title>
+        <title>NextJS App</title>
         <link
           rel="preload"
           href="/Gotham-Font/GothamBook.ttf"

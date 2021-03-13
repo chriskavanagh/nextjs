@@ -3,12 +3,13 @@ import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import Backdrop from "./Backdrop";
 import React, { useContext } from "react";
-//import useSideDrawer from "../hooks/useSideDrawer";
-import { DrawerContext } from "../context/drawerContext";
+import useSideDrawer from "../hooks/useSideDrawer";
+//import { DrawerContext } from "../context/drawerContext";
 
 const Layout = ({ children }) => {
-  const { open, handleDrawer } = useContext(DrawerContext);
-  //const { open, handleDrawer } = useSideDrawer();
+  //const { open, handleDrawer } = useContext(DrawerContext);
+  // use custom hook instead of context directly.
+  const { open, handleDrawer } = useSideDrawer();
   let backdrop;
 
   // if boolean open (if SideDrawer is open) backdrop will open

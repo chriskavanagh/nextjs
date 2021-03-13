@@ -1,12 +1,8 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { DrawerContext } from "../context/drawerContext";
 
 const useSideDrawer = () => {
-  const [open, setOpen] = useState(false);
-
-  const handleDrawer = () => {
-    console.log("handleDrawer Clicked!");
-    setOpen(!open);
-  };
+  const { open, handleDrawer } = useContext(DrawerContext);
 
   const closeDrawer = () => {
     console.log("CloseDrawer Func");
