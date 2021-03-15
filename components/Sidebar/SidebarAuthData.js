@@ -1,4 +1,5 @@
 import { SidebarAuth } from "../../helpers/SidebarData";
+import { signIn, signOut, useSession } from "next-auth/client";
 
 const SidebarAuthData = (props) => {
   return (
