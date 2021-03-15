@@ -5,14 +5,15 @@ import { AiOutlineBars } from "react-icons/ai";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { SidebarData, SidebarAuth } from "../helpers/SidebarData";
 //import { DrawerContext } from "../context/drawerContext";
+import SidebarAuthData from "./Sidebar/SidebarAuthData";
+import SidebarPathData from "./Sidebar/SidebarPathData";
 
 const Sidebar = ({ show, handle }) => {
   // can use context instead of props
   // const { open, handleDrawer } = useContext(DrawerContext);
   let sidebarClass = "sidebar";
-  if (show) {
-    sidebarClass = "sidebar open";
-  }
+
+  show ? (sidebarClass = "sidebar open") : "sidebar";
 
   return (
     <div className={sidebarClass}>
@@ -21,33 +22,10 @@ const Sidebar = ({ show, handle }) => {
         <div className="brandName">Vercel!</div>
       </div>
       <div className="topLine"></div>
-      <nav className="grid">
-        {SidebarData.map((item, index) => (
-          <>
-            <Link href={item.path}>
-              <div className="icon">{item.icon}</div>
-            </Link>
-            <Link href={item.path}>
-              <div className={item.cName}>{item.title}</div>
-            </Link>
-          </>
-        ))}
-      </nav>
+      <SidebarPathData />
       <div className="btmLine"></div>
       <div className="sideBarLogin">Social Auth Login</div>
-
-      <nav className="grid">
-        {SidebarAuth.map((item, index) => (
-          <>
-            <div onClick={() => signIn(item.path)}>
-              <div className="icon">{item.icon}</div>
-            </div>
-            <div onClick={() => signIn(item.path)}>
-              <div className={item.cName}>{item.title}</div>
-            </div>
-          </>
-        ))}
-      </nav>
+      <SidebarAuthData />
       <div className="btmLine"></div>
     </div>
   );
