@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SidebarData } from "../../helpers/SidebarData";
+import { SidebarData } from "./helpers/SidebarData";
 
 const SidebarPathData = (props) => {
   return (
