@@ -1,19 +1,14 @@
 import React from "react";
-import Link from "next/link";
 import { AiOutlineBars } from "react-icons/ai";
-//import styles from "../styles/Sidebar.module.css";
-import { signIn, signOut, useSession } from "next-auth/client";
-import { SidebarData, SidebarAuth } from "../helpers/SidebarData";
-//import { DrawerContext } from "../context/drawerContext";
 import SidebarAuthData from "./Sidebar/SidebarAuthData";
 import SidebarPathData from "./Sidebar/SidebarPathData";
 
 const Sidebar = ({ show, handle }) => {
   // can use context instead of props
   // const { open, handleDrawer } = useContext(DrawerContext);
-  let sidebarClass = "sidebar";
+  let sidebarClass;
 
-  show ? (sidebarClass = "sidebar open") : "sidebar";
+  show ? (sidebarClass = "sidebar open") : (sidebarClass = "sidebar");
 
   return (
     <div className={sidebarClass}>
