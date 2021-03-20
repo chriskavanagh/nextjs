@@ -1,0 +1,16 @@
+.wrapper {
+  background-image: url("/canvas.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  position: fixed;
+  top: 1;
+  left: 0;
+  right: 0;
+}
+
+.top {
+  color: white;
+  margin-top: 60px;
+}

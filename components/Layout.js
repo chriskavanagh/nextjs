@@ -1,8 +1,8 @@
+import React from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import Backdrop from "./Backdrop";
-import React, { useContext } from "react";
 import useSideDrawer from "../hooks/useSideDrawer";
 //import { DrawerContext } from "../context/drawerContext";
 
@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
   const { open, handleDrawer } = useSideDrawer();
   let backdrop;
 
-  // if boolean open (if SideDrawer is open) backdrop will open
+  // if SideDrawer is open backdrop will open
   open ? (backdrop = <Backdrop />) : null;
 
   return (

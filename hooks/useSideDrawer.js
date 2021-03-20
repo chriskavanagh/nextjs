@@ -6,7 +6,7 @@ const useSideDrawer = () => {
 
   const closeDrawer = () => {
     console.log("CloseDrawer Func");
-    setOpen(!open);
+    setOpen((open) => !open);
   };
 
   return { open, closeDrawer, handleDrawer };

@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useSession } from "next-auth/client";
 import { AiOutlineBars } from "react-icons/ai";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPortrait } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = ({ handle }) => {
   const [session] = useSession();
@@ -89,7 +89,7 @@ const Navbar = ({ handle }) => {
           .nav-link:hover {
             background-color: gray;
             color: #c2c22e;
-            transition: 1s;
+            transition: 0.58s;
           }
           .logo {
             color: #fff;
