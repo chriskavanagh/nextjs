@@ -23,7 +23,8 @@
     "react-hook-form": "^6.15.4",
     "react-icons": "^4.2.0",
     "sqlite3": "^5.0.2",
-    "swr": "^0.4.1"
+    "swr": "^0.4.1",
+    "uuidv4": "^6.2.7"
   },
   "devDependencies": {
     "prisma": "^2.17.0"

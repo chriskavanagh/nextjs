@@ -36,7 +36,7 @@ a {
 
 .main {
   flex: 1 0 auto;
-  margin: 3rem auto;
+  margin: 0rem auto;
   width: 100%;
 }
 
@@ -68,10 +68,11 @@ a {
 .sidebar .grid {
   display: grid;
   grid-template-columns: 45px 70px;
-  justify-content: start;
-  align-content: start;
   row-gap: 30px;
   column-gap: 35px;
+  grid-template-rows: auto;
+  grid-template-areas: "left right";
+  grid-auto-flow: row;
 }
 .sidebar .icon {
   margin-left: 30px;
@@ -124,4 +125,12 @@ a {
   margin-left: 1.9rem;
   color: wheat;
   font-weight: 700;
+}
+
+.left {
+  grid-area: left;
+}
+
+.right {
+  grid-area: right;
 }

@@ -4,9 +4,12 @@ import styles from "../../styles/Landing.module.css";
 const Landing = () => {
   return (
     <div className={styles.wrapper}>
-      <div>
-        <h1 className={styles.top}>Test</h1>
-      </div>
+      <h1 className={styles.top}>
+        <code>{`{ top: 0; }`}</code>{" "}
+      </h1>
+      <h1 className={styles.top}>
+        <code> or {`{ top: 10; }`}</code>
+      </h1>
     </div>
   );
 };
