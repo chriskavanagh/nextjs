@@ -4,7 +4,7 @@ import { signIn, signOut, useSession } from "next-auth/client";
 const SidebarAuthData = (props) => {
   return (
     <nav className="grid">
-      {SidebarAuth.map((item, index) => (
+      {SidebarAuth.map((item, _) => (
         <>
           <div onClick={() => signIn(item.path)} key={item.id}>
             <div className="icon">{item.icon}</div>

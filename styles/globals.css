@@ -67,15 +67,16 @@ a {
 
 .sidebar .grid {
   display: grid;
-  grid-template-columns: 45px 70px;
-  row-gap: 30px;
-  column-gap: 35px;
+  /* grid-template-columns: 45px 70px; */
+  grid-auto-columns: 70px;
+  row-gap: 20px;
+  column-gap: 0px;
   grid-template-rows: auto;
   grid-template-areas: "left right";
   grid-auto-flow: row;
 }
 .sidebar .icon {
-  margin-left: 30px;
+  margin-left: 20px;
   cursor: pointer;
 }
 
@@ -83,6 +84,7 @@ a {
   color: rgb(46, 42, 42);
   font-size: 1.1rem;
   cursor: pointer;
+  /* margin-right: 30px; */
 }
 
 .sidebar .topLogo {
@@ -129,6 +131,7 @@ a {
 
 .left {
   grid-area: left;
+  margin-right: 20px;
 }
 
 .right {
